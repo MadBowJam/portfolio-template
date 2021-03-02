@@ -1,0 +1,76 @@
+.education {
+    background: url(../images/Dots_main.png) no-repeat 100%;
+    padding-top: 100px;
+
+    &_wrapper {
+        @include site_width (1199px);
+    }
+
+    &_title {
+        @include title;
+        margin-bottom: 100px;
+    }
+
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &_item {
+        display: flex;
+        position: relative;
+        width: 350px;
+        margin: 0 0 100px 150px;
+
+        &_icon {
+            fill: $white5;
+            position: absolute;
+            left: -125px;
+            top: 25px;
+            z-index: 1;
+        }
+
+        &_text {
+            &::before {
+                @include clearfix_c;
+                @include size (100px,100px);
+                position: absolute;
+                border-radius: 50%;
+                background: $blue;
+                left: -150px;
+            }
+        }
+
+        &_date {
+            @include font ('Roboto-Regular', 18px, $black);
+        }
+
+        &_position {
+            @include font ('PlayfairDisplay-Regular', 22px, $black);
+            margin: 8px 0 10px;
+        }
+
+        &_place {
+            @include font ('PlayfairDisplay-Regular', 22px, $gray6)
+        }
+    }
+
+    @media (max-width: 1199px) {
+        &_wrapper {
+            width: 95%;
+        }
+
+        &_list {
+            flex-direction: column;
+            margin: 0 auto;
+            width: max-content;
+        }
+    }
+
+    @media (max-width: 560px) {
+        &_item {
+            width: 150px;
+        }
+    }
+}

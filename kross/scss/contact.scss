@@ -1,0 +1,29 @@
+@import "global/header_footer.scss";
+
+.contact_form_title {
+    display: none;
+}
+
+.icon.bg.contact, .icon_content.contact, .header_text_titles.contact_info {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+
+    &-track {
+        box-shadow: inset 0 0 5px #373738; 
+        border-radius: 10px;
+    }
+
+    &-thumb {
+        background: #41228e; 
+        border-radius: 10px;
+
+        &:hover {
+            background: #3b1d85; 
+        }
+    }
+}
+
+

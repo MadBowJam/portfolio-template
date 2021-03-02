@@ -1,0 +1,64 @@
+@mixin respond-to($media) {
+    @if $media == to_desktop {
+        @media (max-width: $desktop - 1) {
+            @content;
+        }
+    }
+
+    @if $media == mobile {
+        @media (max-width: $tablet - 1) {
+            @content;
+        }
+    }
+}
+
+@mixin clearfix {
+    clear: both;
+    display: table;
+}
+
+@mixin clearfix_c {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+@mixin site_width($width: $desktop, $margin: 0 auto) {
+    margin: $margin;
+    width: $width;
+}
+
+@mixin global_padding ($padding){
+    width: 100%;
+    padding: $padding;
+}
+
+@mixin font ($family, $px, $color) {
+    font-family: $family;
+    font-size: rem($px);
+    color: $color;
+}
+
+@mixin font_size ($px, $color) {
+    font-size: rem($px);
+    color: $color;
+}
+
+@function rem($px) {
+    @return ($px / $base_font_size) * 1rem;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin min_max ($min, $max) {
+    min-width: $min;
+    max-width: $max;
+}
+
+@mixin title {
+    @include font ('Poppins-Bold', 60px, $black);
+    text-align: center;
+}

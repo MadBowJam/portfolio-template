@@ -1,0 +1,18 @@
+.info {
+    @include site_width (975px);
+    text-align: center;
+    margin-top: 80px;
+
+    &_description {
+        @include font ('PlayfairDisplay-Regular', 22px, $black);
+        margin-bottom: 50px;
+    }
+
+    &_link {
+        @include font ('PlayfairDisplay-Bold', 18px, $blue)
+    }
+
+    @media (max-width: 1199px) {
+        width: 90%;
+    }
+}

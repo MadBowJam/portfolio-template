@@ -1,0 +1,109 @@
+.contact {
+    &_form {
+        background: url(../images/dots.png) $white2;
+        height: 445px;
+        position: relative;
+
+        &_title {
+            font-size: rem(50px);
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        &_list {
+            @include font_size (22px, $black);
+            @include size (635px, 410px);
+            margin: 0 auto;
+            background-color: $white;
+            position: absolute;
+            top: 105px;
+            left: 0;
+            right: 0;
+            padding: 50px 65px 40px;
+            border-radius: 3px;
+
+            &_item {
+                text-align: center;
+
+                &.input {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin: 80px 0 40px;
+                }
+
+                &_input {
+                    @include font ('Roboto-Regular', 15px, $gray2);
+                    border-bottom: 1px solid $gray3;
+                    padding-bottom: 20px;
+
+                    &.name, &.email {
+                        width: 260px;
+                    }
+
+                    &.text {
+                        @include size (100%, 104px);
+                        padding: 0;
+                        margin: 55px 0 0;
+                        border: none;
+                        border-bottom: 1px solid $gray3;
+                        resize: none;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &_submit {
+                    @include font ('PlayfairDisplay-Regular', 22px, $white);
+                    background-color: $blue;
+                    padding: 15px 150px;
+                    border: 1px solid $blue;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1174px) {
+        &_form {
+            height: 355px;
+
+            &_title {
+                padding-top: 5px;
+            }
+
+            &_list {
+                @include size (90%, 375px);
+                top: 85px;
+                padding: 30px 0 20px;
+
+                &_item {
+                    &.input {
+                        margin: 30px 0 40px;
+                        flex-direction: column;
+                    }
+
+                    &_input {
+                        padding: rem(20px) 0;
+                        margin: 0 auto;
+
+                        &.name, &.email {
+                            width: 90%;
+                        }
+
+                        &.text {
+                            @include size (90%, 80px);
+                            margin: 30px auto 0;
+                        }
+                    }
+
+                    &_submit {
+                        padding: 12px 103px;
+                    }
+                }
+            }
+        }
+    }
+}

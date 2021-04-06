@@ -1,0 +1,23 @@
+.contact {
+    &_copyright {
+        background-color: $black2;
+        border-top: rem(1px) solid $black3;
+        height: 120px;
+
+        &_title {
+            @include font_size (15px, $gray);
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width:1175px) {
+        &_copyright {
+            height: 100px;
+
+            &_title {
+                margin-top: 40px;
+            }
+        }
+    }
+}

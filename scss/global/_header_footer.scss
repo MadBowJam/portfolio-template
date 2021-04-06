@@ -1,0 +1,22 @@
+@import "var.scss";
+@import "mixins.scss";
+@import "font.scss";
+@import "font_icons.scss";
+@import "reset.scss";
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+.contact, .header {
+    font-family: 'PlayfairDisplay-Regular';
+}
+
+@import "contact/header_bg.scss";
+@import "contact/header_burger.scss";
+@import "contact/header_navbar.scss";
+@import "contact/header_title.scss";
+@import "contact/form.scss";
+@import "contact/footer.scss";
+@import "contact/copyright.scss";

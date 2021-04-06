@@ -1,0 +1,80 @@
+.header {
+    &_checkbox {
+        display: none;
+
+        &:checked ~ .header_navbar_list {
+            display: flex;
+        }
+
+        &:checked ~ .header_button {
+            position: fixed;
+        }
+
+        &:checked ~ .header_navbar_bg {
+            display: block;
+        }
+    }
+
+    &_navbar_bg {
+        display: none;
+        font-size: 0;
+    }
+
+    &_button {
+        @include size (55px, 40px);
+        display: none;
+        background-color: $blue;
+        border-radius: 5%;
+        position: absolute;
+        top: 20px;
+        z-index: 5;
+
+
+        &_burger {
+            @include size (35px, 5px);
+            background: $white;
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 10px;
+            font-size: 0;
+
+            &::before, &::after {
+                @include clearfix_c;
+                @include size (100%, 100%);
+                background: $white;
+                position: absolute;
+            }
+        
+            &::before {
+                top: -9px;
+            }
+        
+            &::after {
+                top: 9px;
+            }
+        }
+    }
+
+
+
+    @media (max-width: 775px) {
+        &_checkbox {
+            position: fixed;
+            width: 50%
+        }
+
+        &_button {
+            display: block;
+        }
+
+        &_navbar_bg {
+            @include size (50%, 100vh);
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 3;
+        }
+    }
+}

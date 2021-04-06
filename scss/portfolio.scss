@@ -1,0 +1,8 @@
+@import "global/header_footer.scss";
+
+.icon.bg.portfolio, .icon_content.portfolio, .header_text_titles.portfolio {
+    display: block;
+}
+
+@import "global/clients.scss";
+@import "components/portfolio/grid.scss"

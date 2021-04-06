@@ -1,0 +1,10 @@
+@import "global/header_footer.scss";
+
+.icon.bg.about, .icon_content.about, .header_text_titles.about {
+    display: block;
+}
+
+@import "global/clients.scss";
+@import "components/about/team.scss";
+@import "components/about/about.scss";
+@import "components/about/work.scss";

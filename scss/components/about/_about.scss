@@ -1,0 +1,73 @@
+.about {
+    @include site_width (1150px);
+    font-family: 'Roboto-Regular';
+    display: flex;
+    justify-content: space-between;
+
+    &_description {
+        display: inline-block;
+        width: 675px;
+        min-width: 300px;
+        font-size: rem(18px);
+
+        &_p1 {
+            margin: 60px 0 50px;
+        }
+    
+        &_p3 {
+            margin-top: 80px;
+        }
+    }
+
+    &_photo {
+        display: flex;
+        flex-direction: column;
+        margin-top: -200px;
+        margin: -200px -50px 0 0;
+        z-index: 2;
+    
+        &_man {
+            @include min_max (300px, 550px);
+            width: 500px;
+        }
+    
+        &_signature {
+            @include site_width (150px, -75px auto 10px);
+        }
+    
+        &_name {
+            font-size: rem(22px);
+            text-align: center;
+            display: inline-block;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        @include site_width (95%);
+        flex-direction: column;
+
+        &_description {
+            @include site_width (100%);
+            order: 2;
+        }
+
+        &_photo {
+            margin: -100px 0 0;
+
+            &_man {
+                @include site_width (75%);
+            }
+
+            &_signature {
+                @media (max-width: 700px) {
+                    margin-top: -40px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

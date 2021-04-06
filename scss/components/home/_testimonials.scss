@@ -1,0 +1,121 @@
+.testimonials {
+    background: url(../images/Map.png) no-repeat center $blue;
+    position: relative;
+    height: 775px;
+    z-index: -2;
+
+    &_icon {
+        position: absolute;
+        z-index: -1;
+
+        &.dots_8x4 {
+            @include min_max (50px, 200px);
+            width: 10%;
+            top: -50px;
+            left: 5%;
+        }
+
+        &.leaf_orange {
+            @include min_max (50px, 150px);
+            width: 10%;
+            top: 20px;
+            right: 10%;
+        }
+
+        &.dots_3x4_orange {
+            @include min_max (25px, 125px);
+            width: 5%;
+            top: 300px;
+            right: 5%;
+        }
+
+        &.leaf_pink2 {
+            @include min_max (60px, 150px);
+            width: 10%;
+            bottom: 200px;
+            left: 4%;
+        }
+
+        &.leaf_cyan {
+            @include min_max (80px, 175px);
+            width: 15%;
+            bottom: -30px;
+            right: 15%;
+        }
+
+        &.quote {
+            @include min_max (30px, 65px);
+            width: 15%;
+            left: 50%;
+            transform: translate(-50%);
+            right: 0;
+            top: 210px;
+
+            @media (max-width: 649px) {
+                display: none;
+            }
+        }
+    }
+
+    &_text, &_contact {
+        @include site_width (1000px);
+        text-align: center;
+        z-index: 1;
+    }
+
+    &_title {
+        @include font ('Poppins-Bold', 60px, $white);
+        padding: 100px 0 120px;
+    }
+
+    &_description {
+        @include font ('PlayfairDisplay-Regular', 22px, $white);
+        padding-bottom: 50px;
+
+        &2 {
+            color: $cyan2;
+        }
+    }
+
+    &_name {
+        @include font ('PlayfairDisplay-Regular', 20px, $white);
+        padding: 25px 0 10px;
+    }
+
+    &_position {
+        @include font ('PlayfairDisplay-Regular', 18px, $blue5)
+    }
+
+    @media (max-width: 1099px) {
+        &_text, &_contact {
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 649px) {
+        &_title {
+            padding: 70px 0 100px;
+        }
+    }
+
+    @media (max-width: 479px) {
+        &_title {
+            font-size: rem(45px);
+            padding: 50px 0 70px;
+        }
+    }
+
+    @media (max-width: 399px) {
+        &_title {
+            padding: 30px 0 45px;
+        }
+
+        &_description {
+            padding-bottom: 30px;
+        }
+
+        &_name {
+            padding: 15px 0 10px;
+        }
+    }
+}
